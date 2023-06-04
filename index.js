@@ -6,6 +6,7 @@ import authRouter from "./routes/auth/authRouter.js";
 import connectionWS from "./connectionWS/connectionWS.js";
 import expressWs from "express-ws";
 import messageRouter from "./routes/message/messageRouter.js";
+import userRouter from "./routes/user/userRouter.js";
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(
 app.use(express.json());
 app.use("/auth", authRouter);
 app.use("/messages", messageRouter);
+app.use("/users", userRouter);
 app.ws("/", connectionWS);
 
 async function start() {
