@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 const WSServer = expressWs(app);
-export const aWss = WSServer.getWss();
+const aWss = WSServer.getWss();
 
 app.use(
   cors({

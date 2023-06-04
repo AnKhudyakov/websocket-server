@@ -1,7 +1,6 @@
-//import { aWss } from "../index.js";
 import Message from "../models/Message.js";
 
-export let clients = [];
+let clients = [];
 
 const connectionWS = async (ws, req) => {
   ws.on("message", (msg) => {
